@@ -48,6 +48,6 @@ def getPeakIndataSet(dataSet):
     return al
 
 
-ani = animation.FuncAnimation(fig, animate, interval=1000)
+ani = animation.FuncAnimation(fig, animate, interval=1)
 plt.show()
 

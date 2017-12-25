@@ -17,16 +17,16 @@ X = np.array([[1,2],
              [1,0.6],
              [9,11]])
 
-
 y = [0,1,0,1,0,1]
 
 clf = svm.SVC(kernel='linear', C = 1.0)
 
 clf.fit(X,y)
 
-print(clf.predict([0.58,0.76]))
-print(clf.predict([10.58,10.76]))
+print(clf.predict([[0.58,0.76]]))
 
+
+print(clf.predict([[10.58,10.76]]))
 
 w = clf.coef_[0]
 print(w)

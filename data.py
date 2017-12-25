@@ -13,7 +13,7 @@ inlet = StreamInlet(streams[0],max_buflen=1)
 
 def collectData():
     dataSet=[]
-    for i in range(0, 500):
+    for i in range(0, 500):#To flush buffered data
         inlet.pull_sample()
     print(" Do for sampling:- ")
     a=time.time()
@@ -24,14 +24,14 @@ def collectData():
     print(time.time()-a)
     return dataSet
 
-def getPeakIndataSet(dataSet):
+def getMeanIndataSet(dataSet):
     al=[]
     return np.mean(dataSet, axis=0).tolist()
     #return al
 
 def getHandposition01Data():
     dataSet = collectData()
-    return getPeakIndataSet(dataSet)
+    return getMeanIndataSet(dataSet)
 
 checkData01=[]
 checkData02=[]
